@@ -40,7 +40,20 @@ class Main {
         {
             System.out.println("##### Count the number of set bits #####");
             System.out.print("Enter a number: ");
-            System.out.printf("The number of set bits in the given number has: %d", BitOperations.coutSetBits(sc.nextInt()));
+            System.out.printf("The number of set bits in the given number has: %d\n", BitOperations.coutSetBits(sc.nextInt()));
+            System.out.println();
+        }
+
+        {
+            System.out.println("##### Swap two numbers #####");
+            System.out.print("Enter the first number: ");
+            int num1 = sc.nextInt();
+            System.out.print("Enter the second number: ");
+            int num2 = sc.nextInt();
+            int[] num_pair = {num1, num2};
+            System.out.printf("before swapping: (%d, %d)\n", num_pair[0], num_pair[1]);
+            BitOperations.swap(num_pair, 0, 1);
+            System.out.printf("after swapping: (%d, %d)\n", num_pair[0], num_pair[1]);
             System.out.println();
         }
     }
