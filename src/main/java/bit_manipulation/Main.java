@@ -2,6 +2,7 @@ package main.java.bit_manipulation;
 
 import java.util.Scanner;
 import main.java.bit_manipulation.CheckUtils;
+import main.java.bit_manipulation.BitOperations;
 
 class Main {
     public static void main(String[] args) {
@@ -33,6 +34,13 @@ class Main {
             if (CheckUtils.isPowerOf2(sc.nextInt())) {
                 System.out.println("The given number is a power of 2.");
             } else System.out.println("The given number is not a power of 2.");
+            System.out.println();
+        }
+
+        {
+            System.out.println("##### Count the number of set bits #####");
+            System.out.print("Enter a number: ");
+            System.out.printf("The number of set bits in the given number has: %d", BitOperations.coutSetBits(sc.nextInt()));
             System.out.println();
         }
     }
