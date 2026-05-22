@@ -7,6 +7,10 @@ public class BitOperations {
         return count;
     }
 
+    public static int setRightMostUnsetBit(int num) {
+        return num | (num+1);
+    }
+
     public static void swap(int[] arr, int index1, int index2) {
         if (index1 < 0 || index2 < 0 || index1 >= arr.length || index2 >= arr.length) throw new IllegalArgumentException();
 

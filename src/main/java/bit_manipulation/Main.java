@@ -45,6 +45,13 @@ class Main {
         }
 
         {
+            System.out.println("##### Set rightmost unset bit #####");
+            System.out.print("Enter a number: ");
+            System.out.printf("The given number after changing the rightmost unset bit: %d\n", BitOperations.setRightMostUnsetBit(sc.nextInt()));
+            System.out.println();
+        }
+
+        {
             System.out.println("##### Swap two numbers #####");
             System.out.print("Enter the first number: ");
             int num1 = sc.nextInt();
