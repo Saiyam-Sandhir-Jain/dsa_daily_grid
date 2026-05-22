@@ -13,5 +13,5 @@ javac -d out src/main/java/bit_manipulation/*.java
 Run:
 
 ```bash
-java -cp out bit_manipulation.Main
+java -cp out main.java.bit_manipulation.Main
 ```

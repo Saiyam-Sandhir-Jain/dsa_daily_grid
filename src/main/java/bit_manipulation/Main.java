@@ -26,5 +26,14 @@ class Main {
             } else System.out.println("The given number is not odd.");
             System.out.println();
         }
+
+        {
+            System.out.println("##### Check if a number is power of 2 or not #####");
+            System.out.print("Enter a number: ");
+            if (CheckUtils.isPowerOf2(sc.nextInt())) {
+                System.out.println("The given number is a power of 2.");
+            } else System.out.println("The given number is not a power of 2.");
+            System.out.println();
+        }
     }
 }
