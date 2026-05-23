@@ -1,5 +1,7 @@
 package main.java.bit_manipulation;
 
+import java.lang.Math;
+
 public class BitOperations {
     public static int coutSetBits(int num) {
         int count = 0;
@@ -17,5 +19,29 @@ public class BitOperations {
         arr[index1] ^= arr[index2];
         arr[index2] ^= arr[index1];
         arr[index1] ^= arr[index2];
+    }
+
+    public static int divide(int dividend, int divisor) {
+        if (divisor == 0)
+            throw new IllegalArgumentException();
+
+        if (dividend == Integer.MIN_VALUE && divisor == -1)
+            return Integer.MAX_VALUE;
+
+        int sign = ((dividend ^ divisor) < 0) ? -1 : 1;
+        long dvd = Math.abs((long) dividend);
+        long dvs = Math.abs((long) divisor);
+        int quotient = 0;
+
+        while (dvd >= dvs) {
+            int k = 0;
+            while (dvd >= (dvs << (k + 1))) {
+                k++;
+            }
+            dvd -= (dvs << k);
+            quotient += (1 << k);
+        }
+
+        return sign * quotient;
     }
 }

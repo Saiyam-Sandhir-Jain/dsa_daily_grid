@@ -63,5 +63,14 @@ class Main {
             System.out.printf("after swapping: (%d, %d)\n", num_pair[0], num_pair[1]);
             System.out.println();
         }
+
+        {
+            System.out.println("##### Divide two numbers #####");
+            System.out.print("Enter the dividend: ");
+            int dividend = sc.nextInt();
+            System.out.print("Enter the divisor: ");
+            System.out.printf("The result of dividing divided by the divisor: %d\n", BitOperations.divide(dividend, sc.nextInt()));
+            System.out.println();
+        }
     }
 }
